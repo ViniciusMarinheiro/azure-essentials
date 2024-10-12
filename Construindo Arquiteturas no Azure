@@ -1,0 +1,91 @@
+# Como Analisar Custos na Azure e Gerenciar Grupos de Recursos
+
+## Índice
+1. [Introdução](#introdução)
+2. [O que são Grupos de Recursos?](#o-que-são-grupos-de-recursos)
+3. [Analisando Custos no Azure](#analisando-custos-no-azure)
+4. [Como Associar Grupos de Recursos aos Custos](#como-associar-grupos-de-recursos-aos-custos)
+5. [Ferramentas para Monitoramento de Custos](#ferramentas-para-monitoramento-de-custos)
+6. [Melhores Práticas para Otimização de Custos](#melhores-práticas-para-otimização-de-custos)
+
+---
+
+## Introdução
+
+O gerenciamento de custos no Azure é essencial para evitar surpresas na fatura e garantir que os recursos estão sendo usados de forma eficiente. Uma das melhores maneiras de organizar e monitorar seus gastos é através do uso de Grupos de Recursos e das ferramentas de análise de custos oferecidas pela plataforma.
+
+---
+
+## O que são Grupos de Recursos?
+
+Grupos de Recursos no Azure são contêineres que mantêm ativos relacionados para uma solução específica. Eles permitem gerenciar todos os serviços como uma única unidade. Dentro de um grupo de recursos, você pode organizar:
+
+- Máquinas Virtuais (VMs)
+- Bancos de dados
+- Serviços de rede
+- Armazenamento
+
+### Benefícios dos Grupos de Recursos
+- **Gerenciamento unificado**: Facilita o gerenciamento de recursos relacionados.
+- **Aplicação de políticas**: Você pode aplicar políticas de gerenciamento de custos ou controle de acesso em um nível de grupo.
+- **Análise de custos simplificada**: Agrupar recursos relacionados facilita a identificação de onde os custos estão sendo gerados.
+
+---
+
+## Analisando Custos no Azure
+
+A Azure fornece diversas ferramentas para monitoramento e análise de custos. Os principais recursos incluem:
+
+### Azure Cost Management
+O **Azure Cost Management** é uma ferramenta nativa que permite monitorar os custos, prever gastos futuros e otimizar os recursos em uso.
+
+#### Passos para usar o Azure Cost Management:
+1. Acesse o portal do Azure.
+2. Navegue até **Cost Management + Billing**.
+3. Na seção **Custos**, você poderá visualizar relatórios detalhados de gastos.
+
+### Análise de Custos por Período
+- **Intervalos de tempo**: Você pode visualizar os custos mensais ou definir intervalos personalizados.
+- **Divisão por serviços**: Veja quanto está sendo gasto em cada serviço, como VMs, armazenamento, e redes.
+- **Visualizações gráficas**: Utilize gráficos e relatórios para facilitar a compreensão dos dados.
+
+---
+
+## Como Associar Grupos de Recursos aos Custos
+
+Uma das funcionalidades mais úteis dos grupos de recursos é a possibilidade de rastrear custos de maneira granular. Para associar custos a um grupo de recursos específico:
+
+1. **Criar Grupos de Recursos**: Certifique-se de que todos os serviços estão organizados em grupos de recursos específicos.
+2. **Relatórios filtrados**: No Azure Cost Management, você pode filtrar os relatórios de custos por grupo de recursos. Isso facilita a identificação de quais grupos estão gerando mais despesas.
+3. **Etiquetas de custos (Tags)**: Adicione etiquetas (tags) aos seus grupos e recursos individuais para facilitar a segmentação dos relatórios por projeto, departamento ou finalidade.
+
+---
+
+## Ferramentas para Monitoramento de Custos
+
+Além do Azure Cost Management, há outras ferramentas e técnicas para monitorar e reduzir seus custos no Azure:
+
+### Alertas de Custos
+- **Configuração de Alertas**: Defina alertas para ser notificado quando os gastos atingirem um limite predeterminado.
+- **Escopo dos Alertas**: Configure alertas em níveis de assinatura, grupo de recursos ou serviço específico.
+
+### Azure Advisor
+O **Azure Advisor** oferece recomendações para melhorar a eficiência dos recursos, segurança e, mais importante, otimizar custos. Ele sugere alterações como a redução do tamanho de VMs subutilizadas ou a eliminação de serviços ociosos.
+
+---
+
+## Melhores Práticas para Otimização de Custos
+
+Para garantir uma boa gestão de custos no Azure, siga estas melhores práticas:
+
+1. **Utilize o escalonamento automático**: Configure suas VMs para escalarem automaticamente conforme a demanda. Isso reduz o desperdício de recursos durante períodos de baixa utilização.
+2. **Planeje a alocação de recursos**: Antes de criar novos recursos, planeje adequadamente e escolha o tamanho e a configuração certos para suas necessidades.
+3. **Monitore periodicamente**: Verifique os custos regularmente para evitar cobranças inesperadas.
+4. **Etiquetas e Grupos de Recursos**: Utilize tags e organize os recursos em grupos para facilitar o controle de custos e identificação de projetos mais dispendiosos.
+5. **Otimize o uso de licenças**: Verifique se há oportunidades de utilizar licenças pré-pagas ou pacotes de descontos oferecidos pela Azure, como o Azure Reservations.
+
+---
+
+## Conclusão
+
+O gerenciamento eficaz dos custos no Azure requer uma combinação de monitoramento contínuo, organização eficiente de recursos e o uso de ferramentas integradas da plataforma. Com as práticas mencionadas acima, você pode otimizar o uso do Azure, garantindo o máximo de retorno sobre o investimento.
