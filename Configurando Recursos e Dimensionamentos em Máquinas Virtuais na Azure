@@ -1,0 +1,109 @@
+# Configurando Recursos e Dimensionamento em Máquinas Virtuais na Azure
+
+## Índice
+1. [Introdução](#introdução)
+2. [Escolhendo o Tamanho Correto da Máquina Virtual](#escolhendo-o-tamanho-correto-da-máquina-virtual)
+3. [Redimensionando Máquinas Virtuais](#redimensionando-máquinas-virtuais)
+4. [Configurando Recursos Adicionais](#configurando-recursos-adicionais)
+5. [Dimensionamento Automático (Autoscaling)](#dimensionamento-automático-autoscaling)
+6. [Melhores Práticas para Dimensionamento de Máquinas Virtuais](#melhores-práticas-para-dimensionamento-de-máquinas-virtuais)
+
+---
+
+## Introdução
+
+Máquinas Virtuais (VMs) no Azure oferecem flexibilidade para rodar diversas cargas de trabalho, desde pequenos aplicativos web até bancos de dados e grandes sistemas corporativos. Para garantir que você esteja utilizando os recursos de maneira eficiente e econômica, é essencial entender como configurar os recursos e dimensionar suas VMs corretamente.
+
+Neste guia, vamos explorar como escolher o tamanho adequado, redimensionar máquinas existentes e configurar recursos adicionais para garantir o desempenho ideal.
+
+---
+
+## Escolhendo o Tamanho Correto da Máquina Virtual
+
+Ao criar uma nova Máquina Virtual na Azure, é fundamental selecionar o tamanho certo com base nos recursos necessários, como CPU, memória e armazenamento. A Azure oferece várias séries e tamanhos de VMs adequadas a diferentes tipos de cargas de trabalho.
+
+### Fatores a Considerar:
+1. **Cargas de trabalho**: Qual o tipo de aplicação ou serviço que a VM irá rodar? Ex: VMs para bancos de dados precisam de mais memória, enquanto aplicações que fazem processamento intenso necessitam de mais CPU.
+2. **Séries de VM**:
+   - **Série B (Burstable)**: Adequada para cargas de trabalho que têm picos de uso, mas geralmente operam com baixa utilização de recursos.
+   - **Série Dsv3 e Dv3**: Ideal para cargas de trabalho de propósito geral, como servidores de banco de dados ou aplicativos.
+   - **Série Fsv2**: Ótima para computação intensiva.
+   - **Série M**: Projetada para grandes cargas de trabalho com uso intensivo de memória, como bancos de dados corporativos.
+   - **Série NV e NC**: Máquinas com GPUs, ideais para inteligência artificial, modelagem e renderização gráfica.
+
+### Passos para Escolher o Tamanho:
+1. No portal Azure, navegue até **Máquinas Virtuais** > **Criar Máquina Virtual**.
+2. No campo de seleção de **Tamanho**, visualize os diferentes tipos de VM disponíveis.
+3. Use o **Azure Pricing Calculator** para estimar os custos e dimensionar de acordo com o orçamento.
+
+---
+
+## Redimensionando Máquinas Virtuais
+
+Se suas necessidades mudarem, você pode facilmente redimensionar uma VM para ajustar a capacidade de CPU, memória ou armazenamento. Esse processo pode ser feito de maneira simples no Azure, sem precisar recriar a VM.
+
+### Como Redimensionar uma Máquina Virtual:
+1. **Parar a VM**: O redimensionamento requer que a VM seja parada primeiro.
+   - No portal Azure, vá até a página da sua VM e clique em **Parar**.
+2. **Alterar o Tamanho**:
+   - Após parar a VM, vá para a seção de **Tamanho** no menu lateral.
+   - Selecione o novo tamanho da lista disponível.
+3. **Reiniciar a VM**: Após alterar o tamanho, reinicie a VM para aplicar as mudanças.
+
+> **Nota**: O redimensionamento pode levar alguns minutos, e as VMs devem estar em uma série compatível. Se houver problemas de compatibilidade, você poderá ter que alterar a série da VM.
+
+---
+
+## Configurando Recursos Adicionais
+
+Além de CPU e memória, é possível configurar recursos adicionais para melhorar o desempenho e a disponibilidade da sua VM.
+
+### Adicionando Discos Gerenciados
+- Você pode adicionar discos gerenciados à sua VM para armazenamento adicional. O Azure oferece discos de vários tipos:
+  - **Discos HDD**: Mais econômicos, mas com menor desempenho.
+  - **Discos SSD Standard**: Bom equilíbrio entre custo e desempenho.
+  - **Discos SSD Premium**: Alto desempenho para cargas de trabalho intensivas de I/O, como bancos de dados.
+
+### Passos para Adicionar Discos:
+1. No portal Azure, acesse a VM e vá para a seção **Discos**.
+2. Clique em **Adicionar Disco**.
+3. Selecione o tipo de disco e configure o tamanho.
+
+### Configurando Rede Virtual (VNet) e Segurança
+Ao configurar VMs, é importante conectá-las a uma **Rede Virtual (VNet)** para garantir a comunicação segura entre suas VMs e outros serviços.
+
+- **Network Security Groups (NSG)**: Configurar um NSG para controlar o tráfego de rede para suas VMs é uma boa prática de segurança. Defina regras de entrada e saída para garantir que somente o tráfego autorizado seja permitido.
+
+---
+
+## Dimensionamento Automático (Autoscaling)
+
+O **Dimensionamento Automático** ou **Autoscaling** no Azure permite que as suas VMs escalem automaticamente de acordo com a demanda. Esse recurso é particularmente útil para aplicativos que têm picos de uso imprevisíveis.
+
+### Como Configurar o Autoscaling:
+1. **Crie um Conjunto de Dimensionamento de Máquinas Virtuais**:
+   - No portal Azure, vá até **Conjuntos de Dimensionamento de Máquinas Virtuais** e clique em **Criar**.
+2. **Definir Políticas de Escalonamento**:
+   - Configure as regras para quando aumentar ou diminuir o número de instâncias de VMs, com base em métricas como utilização de CPU ou memória.
+3. **Monitorar o Desempenho**:
+   - Use o **Azure Monitor** para monitorar o desempenho das VMs e ajustar as regras de dimensionamento conforme necessário.
+
+> **Dica**: O autoscaling é uma excelente opção para economizar custos, garantindo que você só utiliza recursos extras quando necessário.
+
+---
+
+## Melhores Práticas para Dimensionamento de Máquinas Virtuais
+
+Aqui estão algumas práticas recomendadas para dimensionar VMs de forma eficiente:
+
+1. **Inicie pequeno e ajuste conforme necessário**: É mais econômico começar com uma VM menor e escalá-la conforme necessário, em vez de alocar recursos em excesso desde o início.
+2. **Use conjuntos de dimensionamento (VM Scale Sets)**: Para cargas de trabalho dinâmicas, utilize conjuntos de dimensionamento com autoscaling para adicionar ou remover VMs automaticamente.
+3. **Monitore o desempenho regularmente**: Utilize o Azure Monitor para identificar se há superdimensionamento ou subdimensionamento de recursos.
+4. **Automatize a otimização de custos**: Utilize ferramentas como o **Azure Advisor** para receber recomendações de redimensionamento ou ajuste de recursos com base no uso real.
+5. **Combine VMs com outros serviços gerenciados**: Para cargas de trabalho que não precisam de gerenciamento de infraestruturas, considere combinar VMs com serviços gerenciados, como **Azure App Service** ou **Azure SQL Database**, para reduzir custos e manutenção.
+
+---
+
+## Conclusão
+
+Configurar e dimensionar corretamente suas Máquinas Virtuais no Azure é essencial para otimizar o desempenho e manter os custos sob controle. Ao entender suas necessidades de carga de trabalho, usar redimensionamento e autoscaling, e seguir as melhores práticas, você pode garantir que está utilizando os recursos da Azure de forma eficiente e eficaz.
