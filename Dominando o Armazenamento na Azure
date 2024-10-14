@@ -1,0 +1,56 @@
+# Como Criar Armazenamento na Azure
+
+Este tutorial irá guiá-lo pelo processo de criação de uma conta de armazenamento no Azure.
+
+## Pré-requisitos
+
+- Uma [Conta na Azure](https://azure.microsoft.com/pt-br/free/).
+- Acesso ao [Azure Portal](https://portal.azure.com/).
+
+## Passo a Passo
+
+### 1. Acesse o Portal do Azure
+
+1. Faça login no [Azure Portal](https://portal.azure.com/) com suas credenciais.
+
+### 2. Navegue até o Serviço de Armazenamento
+
+1. No menu à esquerda, clique em **"Criar um recurso"**.
+2. No campo de busca, digite **"Conta de Armazenamento"** e selecione a opção.
+
+### 3. Configurar a Conta de Armazenamento
+
+1. Clique em **"Criar"** para iniciar a criação da conta.
+2. Preencha os seguintes campos:
+   - **Assinatura**: Selecione sua assinatura Azure.
+   - **Grupo de Recursos**: Selecione um grupo existente ou crie um novo.
+   - **Nome da Conta de Armazenamento**: Escolha um nome único, sem caracteres especiais (apenas letras e números).
+   - **Região**: Selecione a região mais próxima de seus usuários/clientes.
+   - **Performance**: Escolha entre *Standard* (armazenamento de baixo custo) ou *Premium* (alta performance).
+   - **Replicação**: Selecione o tipo de replicação para os dados. Por exemplo:
+     - *Locally Redundant Storage (LRS)*: Replica dados dentro de uma única zona de disponibilidade.
+     - *Geo-Redundant Storage (GRS)*: Replica os dados em várias regiões geográficas para maior resiliência.
+   - **Access Tier**: Defina se a camada de acesso será *Hot* (uso frequente) ou *Cool* (armazenamento de longo prazo).
+
+3. Clique em **Avançar: Rede** para configurar opções de rede. Por exemplo:
+   - **Acesso Público**: Configurar se o armazenamento estará acessível via Internet ou apenas em redes específicas.
+   - **Firewall e Redes Virtuais**: Defina se deseja permitir ou restringir o acesso a determinadas redes.
+
+4. Clique em **Avançar: Data Protection** para configurar opções de proteção de dados. Aqui você pode habilitar backups e outras funcionalidades.
+
+### 4. Revisar e Criar
+
+1. Depois de configurar as opções, clique em **Revisar + Criar**.
+2. Revise as informações e clique em **Criar** para finalizar o processo.
+
+### 5. Gerenciar sua Conta de Armazenamento
+
+Após a criação, você pode acessar sua conta de armazenamento navegando até **Contas de Armazenamento** no menu lateral do Azure Portal. A partir daqui, você poderá gerenciar:
+- **Blobs**: Para armazenamento de arquivos não estruturados.
+- **Files**: Para compartilhar arquivos via SMB.
+- **Tables**: Para armazenar dados NoSQL.
+- **Queues**: Para filas de mensagens assíncronas.
+
+## Referências
+
+- [Documentação oficial do Armazenamento no Azure](https://learn.microsoft.com/pt-br/azure/storage/)
