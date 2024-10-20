@@ -1,0 +1,87 @@
+# Gerenciando Políticas em Acessos no Azure
+
+O gerenciamento de políticas de acesso no Azure é essencial para garantir a segurança, conformidade e controle adequado dos recursos. O Azure fornece diversas ferramentas que permitem configurar, gerenciar e auditar os acessos de maneira eficiente. Este guia apresenta as principais práticas e serviços relacionados ao gerenciamento de políticas de acesso no Azure.
+
+## 1. **Controle de Acesso Baseado em Funções (RBAC)**
+
+O **Azure Role-Based Access Control (RBAC)** é uma ferramenta fundamental para gerenciar permissões de usuários e grupos de forma granular. Ele permite que você controle quem tem acesso a quais recursos e em que nível.
+
+### 1.1 Princípios do RBAC
+- **Funções**: Concede permissões específicas, como leitura, gravação, ou controle total.
+- **Usuários e Grupos**: Permite atribuir permissões diretamente a usuários individuais ou grupos.
+- **Escopos**: Controle de permissões por escopo, como a conta, o grupo de recursos ou um recurso individual.
+
+### 1.2 Funções Comuns no Azure
+- **Owner**: Tem controle total sobre o recurso, incluindo delegação de acesso.
+- **Contributor**: Pode gerenciar o recurso, mas não pode conceder acesso a outros.
+- **Reader**: Tem acesso apenas à visualização dos recursos, sem poder modificá-los.
+
+## 2. **Azure Policy**
+
+O **Azure Policy** permite criar, atribuir e gerenciar políticas que garantem a conformidade com padrões organizacionais, regulatórios ou de segurança. As políticas podem ser aplicadas a vários níveis, como grupos de recursos ou assinaturas.
+
+### 2.1 Estrutura de Políticas
+- **Definição de Política**: Define as condições e ações que serão aplicadas.
+- **Atribuição de Política**: Aplica a política a um escopo (grupo de recursos, assinatura, etc.).
+- **Iniciativa**: Conjunto de políticas que podem ser gerenciadas como um único pacote.
+
+### 2.2 Exemplo de Políticas Comuns
+- **Restringir a criação de recursos em determinadas regiões**.
+- **Exigir tags para todos os recursos**.
+- **Aplicar criptografia a discos de máquinas virtuais**.
+
+### 2.3 Compliance
+As políticas ajudam a garantir que os recursos estejam em conformidade com as práticas de segurança e conformidade estabelecidas. O **compliance dashboard** no Azure Policy permite monitorar facilmente quais recursos estão em conformidade e quais não estão.
+
+## 3. **Azure Active Directory (AAD)**
+
+O **Azure Active Directory (AAD)** é o serviço de identidade e autenticação do Azure, permitindo gerenciar identidades e acessos com segurança. Ele suporta a criação de usuários, grupos, e a atribuição de políticas de segurança.
+
+### 3.1 Grupos de Segurança
+Crie **grupos de segurança** no AAD para gerenciar o acesso de múltiplos usuários de forma centralizada. Isso facilita a atribuição de permissões e a administração de usuários com funções semelhantes.
+
+### 3.2 Identidades Gerenciadas
+Utilize **Identidades Gerenciadas** para fornecer acesso seguro a outros serviços Azure, sem a necessidade de gerenciar chaves de API ou credenciais manualmente.
+
+### 3.3 Políticas de Condicionalidade de Acesso
+Implemente **políticas de acesso condicional** para garantir que apenas usuários autorizados e com segurança adequada acessem os recursos. Exemplo de políticas:
+- Exigir autenticação multifator (MFA) para acessar recursos críticos.
+- Bloquear acessos a partir de localizações geográficas suspeitas.
+
+## 4. **Privileged Identity Management (PIM)**
+
+O **Azure Privileged Identity Management (PIM)** permite gerenciar, controlar e monitorar o acesso de administradores privilegiados no Azure.
+
+### 4.1 Elevação Temporária de Acesso
+Com o PIM, você pode conceder **acesso temporário** a funções administrativas, permitindo que os usuários solicitem elevação de privilégio apenas quando necessário, reduzindo a exposição de privilégios permanentes.
+
+### 4.2 Revisão de Acessos
+Implemente **revisões periódicas de acesso** para garantir que os usuários com privilégios elevados ainda necessitem desses acessos, ajustando as permissões conforme necessário.
+
+## 5. **Azure Key Vault**
+
+O **Azure Key Vault** oferece um local seguro para armazenar segredos, chaves e certificados. Ele facilita o gerenciamento de acesso seguro a esses ativos sensíveis através de políticas específicas.
+
+### 5.1 Gerenciamento de Segredos
+Armazene e acesse segredos como senhas e tokens API de forma centralizada e segura no **Key Vault**. Utilize permissões de **RBAC** para controlar quem pode acessar ou gerenciar esses segredos.
+
+### 5.2 Integração com Aplicações
+Acesse segredos diretamente de aplicações utilizando identidades gerenciadas ou autenticação AAD, garantindo que as credenciais sensíveis não sejam expostas no código.
+
+## 6. **Monitoramento e Auditoria de Acessos**
+
+### 6.1 Azure Monitor e Log Analytics
+Monitore atividades de acesso usando o **Azure Monitor** e **Log Analytics**. Registre todas as atividades de autenticação, elevação de privilégio, e acessos a recursos para garantir visibilidade completa.
+
+### 6.2 Azure Security Center
+O **Azure Security Center** oferece recomendações de segurança relacionadas a acessos e políticas. Ele também ajuda a detectar e responder a tentativas de acesso não autorizado.
+
+## 7. **Conclusão**
+
+O gerenciamento de políticas de acesso no Azure é crucial para garantir a segurança dos recursos e a conformidade com as práticas de governança. Usando ferramentas como RBAC, Azure Policy, PIM, e Key Vault, é possível criar um ambiente seguro e eficiente, onde os acessos são concedidos de maneira adequada e monitorados de forma contínua.
+
+---
+**Recursos úteis**:
+- [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+- [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/)
+- [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/)
