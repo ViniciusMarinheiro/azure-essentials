@@ -1,0 +1,72 @@
+# Otimizando Custos no Azure
+
+A otimização de custos no Azure é fundamental para garantir que os recursos de nuvem sejam utilizados de forma eficiente, sem desperdício financeiro. Este guia apresenta as melhores práticas e estratégias para reduzir custos e melhorar o uso dos serviços Azure.
+
+## 1. **Monitoramento e Análise de Custos**
+
+### 1.1 Azure Cost Management
+Utilize o **Azure Cost Management** para monitorar e analisar os gastos da sua conta Azure. Ele permite:
+- Acompanhar os custos em tempo real.
+- Criar alertas para evitar surpresas com picos de uso.
+- Analisar tendências de gastos para ajustar suas necessidades.
+
+### 1.2 Orçamentos e Alertas
+Configure **orçamentos e alertas** no Cost Management para manter controle sobre seus gastos e ser notificado quando chegar perto do limite de custo definido.
+
+## 2. **Dimensionamento e Dimensionamento Automático**
+
+### 2.1 Dimensione Adequadamente os Recursos
+Escolher o tamanho correto das VMs e outros recursos é essencial. Avalie o uso de **Azure Advisor** para recomendações sobre dimensionamento.
+
+### 2.2 Uso de Autoescala (Auto Scaling)
+Habilite o **Auto Scaling** em seus recursos, como VMs e AKS (Azure Kubernetes Service), para ajustar automaticamente a capacidade com base na demanda. Isso evita superdimensionamento e reduz custos em períodos de baixa demanda.
+
+## 3. **Uso de Instâncias Reservadas e Planos de Poupança**
+
+### 3.1 Instâncias Reservadas
+As **Instâncias Reservadas** podem reduzir significativamente os custos de VMs, bancos de dados e outros serviços. Elas oferecem descontos de até 72% para compromissos de 1 ou 3 anos.
+
+### 3.2 Azure Savings Plan
+O **Azure Savings Plan** é uma opção flexível que ajuda a reduzir custos com descontos para serviços em nuvem que você utiliza regularmente, permitindo uma economia previsível.
+
+## 4. **Gerenciamento de Armazenamento**
+
+### 4.1 Escolha do Tipo de Armazenamento
+Selecione o tipo de armazenamento correto para cada cenário. Armazenamento premium, por exemplo, pode ser caro para todos os dados. Use:
+- **Armazenamento de Blob** para arquivos.
+- **Cool Tier** para dados raramente acessados.
+
+### 4.2 Exclusão de Recursos Inativos
+Remova **recursos inativos** como discos órfãos, snapshots antigos e backups desnecessários para evitar cobrança adicional.
+
+## 5. **Uso de Contêineres e Servless Computing**
+
+### 5.1 Azure Kubernetes Service (AKS)
+Utilize o **AKS** para orquestrar contêineres com melhor controle sobre a escalabilidade. A integração com autoescalamento pode reduzir custos em tempos de baixa demanda.
+
+### 5.2 Azure Functions e Logic Apps
+Serviços **serverless**, como **Azure Functions** e **Logic Apps**, são cobrados com base no uso real, o que elimina a necessidade de manter servidores sempre ativos, economizando recursos.
+
+## 6. **Gerenciamento de Licenciamento**
+
+### 6.1 Bring Your Own License (BYOL)
+Use a abordagem **Bring Your Own License (BYOL)**, se aplicável, para reutilizar licenças existentes de software, como o SQL Server, o que pode reduzir os custos de licenciamento na nuvem.
+
+### 6.2 Benefício Híbrido do Azure
+O **Azure Hybrid Benefit** permite utilizar suas licenças existentes de Windows Server ou SQL Server no Azure, economizando até 40% em VMs.
+
+## 7. **Desligamento de Recursos Fora do Horário de Uso**
+
+Desligue recursos, como VMs de desenvolvimento e teste, fora do horário comercial ou durante períodos de baixa atividade, evitando cobranças desnecessárias.
+
+### 7.1 Automation Runbooks
+Automatize o desligamento e o reinício de VMs e outros recursos fora do horário de uso com **Automation Runbooks** no Azure.
+
+## 8. **Conclusão**
+
+A otimização de custos no Azure exige uma abordagem contínua de monitoramento, ajuste e adoção de práticas recomendadas. Ao aplicar as estratégias mencionadas, é possível maximizar o valor dos recursos de nuvem, mantendo o controle financeiro e evitando desperdícios.
+
+---
+**Recursos úteis**:
+- [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/)
+- [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
