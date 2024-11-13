@@ -1,0 +1,85 @@
+# Monitoramento Inteligente com o Azure
+
+O monitoramento inteligente na Azure utiliza serviços avançados para monitorar e analisar a saúde, o desempenho e a segurança dos recursos na nuvem. Ferramentas como Azure Monitor, Application Insights, Azure Log Analytics e Azure Security Center permitem uma abordagem proativa e integrada para o monitoramento de infraestrutura, aplicações e dados de segurança.
+
+## 1. Azure Monitor
+
+[Azure Monitor](https://learn.microsoft.com/pt-br/azure/azure-monitor/) é o serviço principal de monitoramento da Azure. Ele coleta, analisa e armazena métricas e logs de praticamente todos os recursos da Azure, oferecendo uma visão abrangente do ambiente e permitindo a criação de alertas.
+
+**Principais recursos:**
+- **Métricas e Logs em Tempo Real**: Monitora a performance de recursos e coleta logs de atividades.
+- **Alertas Personalizáveis**: Configuração de alertas automáticos baseados em condições específicas.
+- **Visualização de Dados**: Painéis e gráficos personalizáveis para análise de métricas e logs.
+- **Integração com Outros Serviços**: Suporte para integração com ferramentas como Grafana e outras soluções de monitoramento de terceiros.
+
+## 2. Application Insights
+
+[Application Insights](https://learn.microsoft.com/pt-br/azure/azure-monitor/app/app-insights-overview) é uma extensão do Azure Monitor para monitoramento de aplicações. Ele permite rastrear a performance de aplicativos, identificar problemas e obter insights detalhados sobre o uso de aplicações em tempo real.
+
+**Principais recursos:**
+- **Monitoramento de Desempenho**: Acompanha tempos de resposta, uso de dependências e outras métricas críticas.
+- **Diagnóstico de Erros**: Identifica exceções e erros para correção proativa.
+- **Mapeamento de Dependências**: Visualiza a relação entre componentes e dependências do aplicativo.
+- **Análise de Uso**: Fornece dados detalhados sobre como os usuários interagem com a aplicação.
+
+## 3. Azure Log Analytics
+
+[Azure Log Analytics](https://learn.microsoft.com/pt-br/azure/azure-monitor/logs/log-analytics-overview) permite a análise centralizada de dados e logs, oferecendo uma linguagem de consulta avançada (KQL - Kusto Query Language) para criação de consultas personalizadas.
+
+**Principais recursos:**
+- **Coleta Centralizada de Logs**: Consolida logs de diversas fontes, incluindo recursos da Azure e ambientes híbridos.
+- **Consultas Avançadas**: Utiliza KQL para consultas detalhadas e extração de insights.
+- **Painéis Personalizados**: Criação de dashboards personalizados para visualizar dados críticos de logs.
+- **Suporte a Alertas e Ações**: Define alertas com base em consultas específicas para ações automáticas.
+
+## 4. Azure Security Center
+
+[Azure Security Center](https://learn.microsoft.com/pt-br/azure/security-center/) é uma plataforma unificada de gerenciamento de segurança, oferecendo insights sobre vulnerabilidades e proteção contra ameaças. Ele monitora o estado de segurança e ajuda a manter a conformidade com normas de segurança.
+
+**Principais recursos:**
+- **Avaliação de Segurança Contínua**: Identifica riscos e vulnerabilidades nos recursos.
+- **Proteção contra Ameaças**: Detecta e responde automaticamente a atividades suspeitas.
+- **Recomendações de Melhoria**: Fornece sugestões de segurança baseadas nas melhores práticas.
+- **Conformidade com Normas**: Ajuda a manter a conformidade com regulamentos como GDPR e ISO.
+
+## 5. Azure Sentinel
+
+[Azure Sentinel](https://learn.microsoft.com/pt-br/azure/sentinel/) é uma solução de SIEM (Security Information and Event Management) nativa da nuvem. Ele usa IA para detectar, investigar e responder a ameaças em tempo real.
+
+**Principais recursos:**
+- **Detecção Inteligente de Ameaças**: IA e machine learning para identificar e priorizar ameaças.
+- **Investigação Automatizada**: Ferramentas para análise rápida de alertas e incidentes.
+- **Conexões com Diversas Fontes de Dados**: Integração com sistemas da Azure, ambientes locais e outras nuvens.
+- **Automação de Respostas**: Criação de playbooks para respostas automáticas a incidentes.
+
+## 6. Azure Service Health
+
+[Azure Service Health](https://learn.microsoft.com/pt-br/azure/service-health/) fornece informações personalizadas sobre a saúde dos serviços Azure em uso, notificando sobre problemas e planejamentos de manutenção.
+
+**Principais recursos:**
+- **Alertas Proativos**: Notificações automáticas sobre problemas e manutenções planejadas que possam impactar seus recursos.
+- **Histórico de Incidentes**: Acesso a um histórico detalhado de incidentes e eventos que afetaram seus serviços.
+- **Planejamento de Continuidade**: Informações para auxiliar no planejamento de recuperação de desastres e continuidade de negócios.
+
+## 7. Azure Automation
+
+[Azure Automation](https://learn.microsoft.com/pt-br/azure/automation/) permite a automação de processos de manutenção e monitoramento, otimizando a gestão de infraestrutura e reduzindo erros manuais.
+
+**Principais recursos:**
+- **Runbooks Automatizados**: Automação de tarefas de rotina, como atualizações e backups.
+- **Gestão de Configuração**: Controle de estado e conformidade dos recursos.
+- **Atualização de Patches**: Automatização do gerenciamento de patches para recursos de VMs.
+
+## Conclusão
+
+O monitoramento inteligente com o Azure ajuda a garantir a operação eficiente e segura de ambientes de TI, com insights acionáveis e ferramentas de automação. A escolha das ferramentas depende das necessidades específicas de monitoramento e segurança de cada ambiente.
+
+## Referências
+
+- [Documentação do Azure Monitor](https://learn.microsoft.com/pt-br/azure/azure-monitor/)
+- [Application Insights](https://learn.microsoft.com/pt-br/azure/azure-monitor/app/app-insights-overview)
+- [Log Analytics](https://learn.microsoft.com/pt-br/azure/azure-monitor/logs/log-analytics-overview)
+- [Azure Security Center](https://learn.microsoft.com/pt-br/azure/security-center/)
+- [Azure Sentinel](https://learn.microsoft.com/pt-br/azure/sentinel/)
+- [Azure Service Health](https://learn.microsoft.com/pt-br/azure/service-health/)
+- [Azure Automation](https://learn.microsoft.com/pt-br/azure/automation/)
