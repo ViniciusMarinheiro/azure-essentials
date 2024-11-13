@@ -1,0 +1,72 @@
+# Ferramentas de Implantação na Azure
+
+Este documento descreve as principais ferramentas de implantação na Azure, incluindo o Azure DevOps, GitHub Actions, Azure Resource Manager (ARM) e Terraform, entre outras. Com estas ferramentas, é possível automatizar e gerenciar implantações na nuvem, garantir maior eficiência e controlar melhor o processo de DevOps.
+
+## 1. Azure DevOps
+
+O [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/) é uma plataforma de DevOps completa que fornece serviços para planejamento, desenvolvimento, teste e entrega de software. Ele inclui um conjunto de ferramentas que facilitam a integração contínua (CI) e a entrega contínua (CD), permitindo a automação de processos de implantação.
+
+**Principais recursos:**
+- **Pipelines**: Para criar pipelines de CI/CD, integrando-se com várias linguagens e ambientes.
+- **Repos**: Gerenciamento de repositórios Git privados.
+- **Boards**: Ferramentas para o gerenciamento de projetos e rastreamento de trabalho.
+- **Test Plans**: Ferramentas para gerenciamento de testes de qualidade.
+- **Artifacts**: Hospedagem e compartilhamento de pacotes NuGet, npm e Maven.
+
+## 2. GitHub Actions
+
+[GitHub Actions](https://github.com/features/actions) permite a automação de workflows diretamente no GitHub. Com ele, é possível configurar pipelines de CI/CD que integram com a Azure e outras plataformas.
+
+**Principais recursos:**
+- **Automação de Workflows**: Configurações de CI/CD baseadas em YAML que facilitam a integração com a Azure.
+- **GitHub Marketplace**: Acesso a um vasto conjunto de ações compartilhadas pela comunidade.
+- **Integração Nativa com a Azure**: Facilita o deployment de aplicações diretamente na Azure.
+
+## 3. Azure Resource Manager (ARM)
+
+[Azure Resource Manager (ARM)](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/) é o serviço de gerenciamento de infraestrutura da Azure. Com ARM, é possível definir, gerenciar e monitorar recursos da Azure usando templates em JSON, o que permite uma implantação declarativa e controlada.
+
+**Principais recursos:**
+- **Templates ARM**: Arquivos JSON que definem a infraestrutura como código (IaC).
+- **Gerenciamento de Grupos de Recursos**: Facilita o gerenciamento de recursos de forma agrupada.
+- **Controle de Acessos**: Permite o controle de permissões e compliance com políticas organizacionais.
+
+## 4. Terraform
+
+[Terraform](https://www.terraform.io/) é uma ferramenta de IaC de código aberto que permite definir e provisionar infraestrutura na Azure de maneira declarativa. Ele permite versionar a infraestrutura e integrá-la ao processo de CI/CD.
+
+**Principais recursos:**
+- **Configuração Declarativa**: Definição da infraestrutura usando arquivos `.tf`.
+- **Suporte Multinuvem**: A mesma configuração pode ser usada para diferentes provedores de nuvem.
+- **Integração com o Azure**: A Azure possui um provider oficial para Terraform, facilitando o provisionamento de recursos.
+
+## 5. Azure CLI
+
+[Azure CLI](https://learn.microsoft.com/pt-br/cli/azure/) é a interface de linha de comando da Azure, que permite o gerenciamento e implantação de recursos da Azure por comandos de script. É uma ferramenta prática para automação de tarefas e execução de scripts em pipelines.
+
+**Principais recursos:**
+- **Automação de Tarefas**: Permite executar operações em lote para a criação e gerenciamento de recursos.
+- **Flexibilidade de Uso**: Pode ser usada localmente ou integrada em pipelines de CI/CD.
+- **Suporte Multiplataforma**: Disponível para Windows, macOS e Linux.
+
+## 6. Bicep
+
+[Bicep](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/bicep/) é uma linguagem declarativa da Microsoft que simplifica a criação de templates para ARM. Ele serve como uma alternativa mais legível e simples aos templates JSON, facilitando o uso de IaC.
+
+**Principais recursos:**
+- **Simplicidade e Clareza**: Sintaxe simplificada em relação ao JSON.
+- **Compilação para ARM Templates**: Os arquivos Bicep são compilados para ARM templates, o que permite compatibilidade total com a Azure.
+- **Reutilização de Componentes**: Suporte para módulos que facilitam a organização e reutilização de recursos.
+
+## Conclusão
+
+Essas ferramentas possibilitam diferentes abordagens para a implantação na Azure, atendendo a variados níveis de complexidade e casos de uso. A escolha da ferramenta ideal dependerá das necessidades específicas do projeto, seja pela simplicidade de configuração, automação, controle de infraestrutura como código (IaC), ou pela integração com pipelines de CI/CD.
+
+## Referências
+
+- [Documentação do Azure DevOps](https://learn.microsoft.com/pt-br/azure/devops/)
+- [Documentação do GitHub Actions](https://docs.github.com/pt/actions)
+- [Azure Resource Manager](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/)
+- [Terraform na Azure](https://learn.microsoft.com/pt-br/azure/developer/terraform/)
+- [Azure CLI](https://learn.microsoft.com/pt-br/cli/azure/)
+- [Documentação do Bicep](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/bicep/)
